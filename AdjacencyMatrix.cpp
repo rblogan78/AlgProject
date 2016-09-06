@@ -54,20 +54,19 @@ namespace logan_matrix{
 				getline(myfile, line);
 				istringstream iss(line);
 				copy(istream_iterator<string>(iss), istream_iterator<string>(), back_inserter(tokens));
-				for(int i=0; i<tokens.size(); i++){
-					
+				for(int i=0; i<tokens.size(); i++){	
 					if(tokens[i].compare("1")==0){
-						this->add_edge(row,i+1);
+						this->add_vertex(row,i+1);
 					}
 				}
 				tokens.clear();
 				cout << endl;
 				row++;				
 			}
-			this->display();		
+			this->display();				
 		}
 
-		void AdjacencyMatrix::add_edge(int i, int j) {
+		void AdjacencyMatrix::add_vertex(int i, int j) {
 			if( i > vertexCount || j > vertexCount || i < 0 || j < 0){
 				cout<<"Invalid edge!\n";
 			}else{
@@ -76,7 +75,7 @@ namespace logan_matrix{
 			}
 		}
 
-		void AdjacencyMatrix::remove_edge(int i, int j) {
+		void AdjacencyMatrix::remove_vertex(int i, int j) {
 
 		}
 
@@ -84,9 +83,9 @@ namespace logan_matrix{
 			int i,j;
 			for(i = 0; i < vertexCount; i++){
 				for(j = 0; j < vertexCount; j++){
-					cout<<adj[i][j]<<"  ";
+					cout << adj[i][j] << "  ";
 				}
-				cout<<endl;
+				cout << endl;
 			}
 		}
 

@@ -22,9 +22,9 @@ namespace logan_matrix{
 
 			AdjacencyMatrix(const std::string filename);
 
-			void add_edge(int i, int j);
+			void add_vertex(int i, int j);
 
-			void remove_edge(int i, int j);
+			void remove_vertex(int i, int j);
 
 			void display();
 
