@@ -26,6 +26,8 @@ namespace logan_matrix{
 
 			void remove_vertex(int i, int j);
 
+			bool adjacent (int i, int j) const;
+
 			void display();
 
 			virtual ~AdjacencyMatrix();
